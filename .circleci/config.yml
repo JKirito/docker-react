@@ -16,4 +16,5 @@ jobs:
       - checkout
       - run: |
           docker build -t docker-react/frontend -f Dockerfile.dev .
-
+      - run: |
+          docker run docker-react/frontend yarn run test -- --coverage
